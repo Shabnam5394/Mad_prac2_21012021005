@@ -47,6 +47,10 @@ class MainActivity : AppCompatActivity() {
     fun showMessage(msg:String){
         Log.i(TAG,"$msg")
         Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
+        val a=findViewById<ConstraintLayout?>(R.id.sms)
+        if(a!=null){
+            Snackbar.make(a,"$msg",Snackbar.LENGTH_SHORT).show()
+        }
     }
 }
 
